@@ -1,6 +1,9 @@
 .DS_Store
+*/__pycache__
 .vscode
 bot_venv
+*/databases
+*/data
 */.env
 */results
 */logs
