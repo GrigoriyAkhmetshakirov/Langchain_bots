@@ -1,0 +1,6 @@
+.DS_Store
+.vscode
+bot_venv
+*/.env
+*/results
+*/logs
