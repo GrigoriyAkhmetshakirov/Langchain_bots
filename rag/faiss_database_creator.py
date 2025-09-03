@@ -11,10 +11,7 @@ class Creator:
     """
     Класс для создания, сохранения и загрузки векторных баз данных FAISS.
     """
-    def __init__(self):
-        """Инициализация"""
-        print('Creator ready')
-
+    
     def make_splitter(self, cfg):
         """
         Создает и возвращает текстовый сплиттер на основе конфигурации.
@@ -108,13 +105,13 @@ class Creator:
         Returns:
             FAISS: Загруженное векторное хранилище
         """
-        db = FAISS.load_local(
+        vector_store = FAISS.load_local(
             folder_path=os.path.join(path, name),
             embeddings=embed_model,
             allow_dangerous_deserialization=True
         )
         print(f'Векторное хранилище загружено из: {path}/{name}')
-        return db
+        return vector_store
 
 if __name__ == '__main__':
     # Конфигурации для различных стратегий разделения текста
@@ -150,13 +147,13 @@ if __name__ == '__main__':
     creator.save_database(db)
     
     # Загрузка существующей базы
-    db = creator.load_database(embed_model)
+    vector_store = creator.load_database(embed_model)
     
     # Пример поиска по базе
     question = 'Какие данные нужны для обучения модели'
 
     # Поиск наиболее релевантных чанков
-    docs_and_scores = db.similarity_search_with_score(question, k=3)
+    docs_and_scores = vector_store.similarity_search_with_score(question, k=3)
     
     # Вывод результатов поиска
     for doc, score in docs_and_scores:
