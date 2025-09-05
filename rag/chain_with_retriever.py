@@ -11,7 +11,7 @@ from faiss_database_creator import Creator
 
 load_dotenv()
 
-# Инициализация модели для создания эмбеддингов
+# Модель для эмбеддингов
 embed_model = HuggingFaceEmbeddings(
     model_name='sentence-transformers/all-mpnet-base-v2'
     # 'sentence-transformers/all-MiniLM-L6-v2'  # Легкая и быстрая модель

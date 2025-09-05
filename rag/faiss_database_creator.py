@@ -120,7 +120,7 @@ if __name__ == '__main__':
         {"name": "tok_800_100",  "unit": "tokens", "chunk_size": 800,  "chunk_overlap": 100},
         {"name": "tok_1200_0",   "unit": "tokens", "chunk_size": 1200, "chunk_overlap": 0},
         {"name": "chr_1000_100", "unit": "chars",  "chunk_size": 1000, "chunk_overlap": 100},
-        {"name": "chr_100_10",   "unit": "chars",  "chunk_size": 100, "chunk_overlap": 10},
+        {"name": "chr_400_50",   "unit": "chars",  "chunk_size": 400, "chunk_overlap": 50},
     ]
     
     creator = Creator()

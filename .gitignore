@@ -7,3 +7,4 @@ bot_venv
 */.env
 */results
 */logs
+rag/eval.ipynb
