@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+
 import numexpr
 
 from langchain.chat_models import init_chat_model
@@ -27,7 +28,7 @@ llm = init_chat_model(
     'deepseek-chat',
     model_provider='deepseek',
     temperature=0,
-    max_tokens=1500,
+    max_tokens=100,
 )
 
 # Создаем агента с инструментами
