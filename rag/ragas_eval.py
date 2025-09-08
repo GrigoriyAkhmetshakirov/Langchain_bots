@@ -6,7 +6,6 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chat_models import init_chat_model
 from langchain.chains import RetrievalQA
 from langchain.prompts import ChatPromptTemplate
-from langchain.schema.runnable import RunnableLambda
 from langchain.schema.output_parser import StrOutputParser
   
 from ragas.metrics import (  
