@@ -1,7 +1,10 @@
 import os
 import shutil
+
 from dotenv import load_dotenv
+
 from git import Repo
+
 from langchain.chat_models import init_chat_model
 from langchain.prompts import PromptTemplate
 from langchain.text_splitter import RecursiveCharacterTextSplitter
